@@ -1,0 +1,11 @@
+<view class="page">
+  <view class="p40 text-center">
+  	<form bindsubmit="formSubmit">
+  	  <input name="supplier" class="p20 bg-soft mb20" placeholder="供应商ID" type="number" maxlength="8" auto-focus/>
+      <input name="access_code" class="p20 bg-soft mb30" placeholder="接入码" type="text"  maxlength="12"/>
+	  <view>
+	    <button formType="submit" type="primary">点击接入</button>
+	  </view>
+  	</form>
+  </view>
+</view>

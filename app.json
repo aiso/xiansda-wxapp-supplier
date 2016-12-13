@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+
+    "pages/item/index",
+    "pages/item/edit",
+
+    "pages/logs/logs",
+    "pages/demo/index",
+
+    "pages/user/index",
+    "pages/user/login",
+    "pages/user/access"
+
+  ],
+  "window":{
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "鲜时达",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#09bb07",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "事务",
+      "iconPath": "images/icons/layers.png",
+      "selectedIconPath": "images/icons/layers_s.png"       
+    }, {
+      "pagePath": "pages/item/index",
+      "text": "产品",
+      "iconPath": "images/icons/tag.png",
+      "selectedIconPath": "images/icons/tag_s.png"          
+    }, {
+      "pagePath": "pages/user/index",
+      "text": "用户",
+      "iconPath": "images/icons/head.png",
+      "selectedIconPath": "images/icons/head_s.png"          
+    }]
+  }    
+}

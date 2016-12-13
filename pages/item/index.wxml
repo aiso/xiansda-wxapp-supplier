@@ -1,0 +1,52 @@
+<!--list.wxml-->
+<view class="page">
+	<view wx:if="{{items.length==0}}">
+		<view class="pane bg-soft">
+			<view class="flex-column text-center mb30">
+				<icon type="info_circle mb30" size="64"/>	
+				<text class="text-h1 text-ls">我的产品</text>
+			</view>
+			<view>
+				<text class="text-left text-h3 c-gray text-ls">我们平台为您提供了可靠，可追溯来源的产品。你可以从供应商中选择产品，并制定代理策略，发布到你的服务站点。所有关注此服务站的客户就能浏览到你发布的产品。</text>
+			</view>
+		</view>
+		<view class="section">
+			<navigator url="edit?id=0">
+				<button type="primary">添加产品</button>	
+			</navigator>
+		</view>
+	</view>
+	<view wx:if="{{items.length}}">
+	  <view class="bg-soft flex-row">
+	  	<view class="p30 flex-auto">
+	  		<text class="text-h3">我的产品</text>
+	  	</view>
+
+	  	<view class="btn text-center p20 flex-column" bindtap="reload">
+	  		<image src="/images/icons/reload.png" class="btn-icon"></image>
+	  	</view>
+	  	<navigator url="edit?id=0">
+		  	<view class="btn text-center p20 flex-column">
+		  		<image src="/images/icons/plus.png" class="btn-icon"></image>
+		  	</view>
+	  	</navigator>
+	  </view>
+	  <navigator url="../s{{item.service}}/item?id={{item.id}}" wx:for="{{items}}" wx:key="id">
+	  	<view class="list-item border-bottom">
+	  	  <image class="list-item-thumbnail" src="{{item.img}}" mode="aspectFill"></image>
+	  	  <view class="list-item-content flex-column">
+	  	  	<text class="text-h3 single-line mb5">{{item.title}}</text>
+	  	  	<view class="flex-row">
+	  	  		<text class="text-h4 mb5">{{item.supplier.name}}</text>
+	  	  		<text class="text-h5 c-gray text-bold pl10 ">{{item.service.title}}</text>
+	  	  	</view>
+	  	  </view>
+	  	  <view class="flex-column text-center">
+	  	  	<text class="text-h3 text-bold c-red mb5">￥{{item.fee}}</text>
+	  	  	<text class="text-h5 c-light">代理费</text>
+	  	  </view>
+	  	</view>
+	  </navigator>
+	</view>
+
+</view>

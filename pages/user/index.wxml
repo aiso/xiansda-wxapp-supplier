@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="pane-hero text-center bg-soft flex-column">
+    <view class="mb10">
+      <image src="{{userInfo.avatarUrl}}" class="avatar" mode="aspectFill"></image>
+    </view>
+    <text class="text-h2 mb5">{{userInfo.nickName}}</text>
+    <text class="text-h4 c-gray">{{station.name}}</text>
+  </view>
+
+  <view class="list-item flex-row pr30 border-bottom" bindtap="relogin">
+    <image class="btn-icon" src="/images/icons/reload.png"></image>
+    <text class="flex-auto plr30">重新登录</text>
+  </view> 
+
+  <navigator url="../demo/index">
+    <view class="list-item flex-row pr30 border-bottom">
+      <image class="btn-icon" src="/images/icons/hammer.png"></image>
+      <text class="flex-auto plr30">调试页面</text>
+    </view> 
+  </navigator>
+</view>
